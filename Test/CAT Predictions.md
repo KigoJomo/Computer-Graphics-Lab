@@ -1,6 +1,6 @@
 #
 
-## CAT Predictions
+## CAT One Predictions
 
 ### Detailed Walkthrough for CAT Prediction 1
 
