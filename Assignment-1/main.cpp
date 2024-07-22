@@ -4,9 +4,12 @@
 const int WINDOW_WIDTH = 800;
 const int WINDOW_HEIGHT = 600;
 
+float angle = 0.0f; // Initial rotation angle
+
 // Function declarations
 void display();
 void reshape(int width, int height);
+void idle();
 
 int main(int argc, char **argv)
 {
@@ -17,6 +20,7 @@ int main(int argc, char **argv)
     glutCreateWindow("OpenGL Teapot");
 
     // Register callbacks
+    glutIdleFunc(idle);
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
 
@@ -44,6 +48,9 @@ void display()
     // Move the teapot back a bit
     glTranslatef(0.0f, 0.0f, -5.0f);
 
+    // Apply rotation to the teapot
+    glRotatef(angle, 0.0f, 1.0f, 0.0f); // Rotate around the y-axis
+
     // Set the teapot color
     glColor3f(0.0f, 1.0f, 1.0f);
 
@@ -63,4 +70,13 @@ void reshape(int width, int height)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(45.0, (double)width / (double)height, 1.0, 100.0);
+}
+
+void idle()
+{
+    // Update the rotation angle
+    angle += 0.5f;
+
+    // Redisplay
+    glutPostRedisplay();
 }
