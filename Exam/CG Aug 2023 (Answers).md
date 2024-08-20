@@ -311,9 +311,7 @@ A Virtual Reality (VR) system consists of several key components that work toget
 
 2. **Output Devices:**
    - **Head-Mounted Display (HMD):** A wearable device that presents the virtual world directly in front of the user's eyes, often with stereoscopic (3D) vision.
-   -
-
- **Audio Output:** Surround sound or binaural audio systems that deliver 3D spatial audio to enhance immersion.
+   - **Audio Output:** Surround sound or binaural audio systems that deliver 3D spatial audio to enhance immersion.
 
 3. **Processing Unit:**
    - **Computer or Console:** Processes input data, runs the VR software, and renders the virtual environment in real-time. High-performance CPUs and GPUs are crucial for smooth and responsive VR experiences.
